@@ -25,6 +25,7 @@ stages:
         location: 'North Europe'
         templateLocation: 'URL of the file'
         csmFileLink: 'https://raw.githubusercontent.com/Memija/progress/master/arm/templates/template.json'
+        overrideParameters: '-connected_service_name_value $(ConnectedServiceName) -tenant_id_value $(TenantId) -visual_studio_subscription_id $(VisualStudioSubscriptionId)'
         deploymentMode: 'Incremental'
       displayName: 'Deploy Azure resources'
     - task: NodeTool@0
