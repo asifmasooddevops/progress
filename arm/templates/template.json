@@ -281,7 +281,7 @@
         ],
         "actionGroups": {
           "groupIds": [
-            "[concat('/subscriptions/', parameters('visual_studio_subscription_id'), '/resourceGroups/training-web-app-rg/providers/microsoft.insights/actiongroups/application%20insights%20smart%20detection)]"
+            "[concat('/subscriptions/', parameters('visual_studio_subscription_id'), '/resourceGroups/training-web-app-rg/providers/microsoft.insights/actiongroups/application%20insights%20smart%20detection')]"
           ]
         }
       }
