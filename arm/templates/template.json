@@ -23,7 +23,7 @@
       "type": "String"
     },
     "location_name": {
-      "defaultValue": "North Europe",
+      "defaultValue": "northeurope",
       "type": "String"
     },
     "production_environment_app_service_name": {
