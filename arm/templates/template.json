@@ -239,7 +239,7 @@
       "type": "Microsoft.Web/serverfarms",
       "apiVersion": "2018-02-01",
       "name": "[parameters('app_service_plan_name')]",
-      "location": "parameters('location_name')",
+      "location": "northeurope",
       "sku": {
         "name": "B1",
         "tier": "Basic",
@@ -306,7 +306,7 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2018-11-01",
       "name": "[parameters('production_environment_app_service_name')]",
-      "location": "parameters('location_name')",
+      "location": "northeurope",
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', parameters('app_service_plan_name'))]"
       ],
@@ -343,7 +343,7 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2018-11-01",
       "name": "[parameters('dev_environment_app_service_name')]",
-      "location": "parameters('location_name')",
+      "location": "northeurope",
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', parameters('app_service_plan_name'))]"
       ],
@@ -380,7 +380,7 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2018-11-01",
       "name": "[parameters('test_environment_app_service_name')]",
-      "location": "parameters('location_name')",
+      "location": "northeurope",
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', parameters('app_service_plan_name'))]"
       ],
@@ -417,7 +417,7 @@
       "type": "Microsoft.Web/sites/config",
       "apiVersion": "2018-11-01",
       "name": "[concat(parameters('production_environment_app_service_name'), '/web')]",
-      "location": "parameters('location_name')",
+      "location": "northeurope",
       "dependsOn": [
         "[resourceId('Microsoft.Web/sites', parameters('production_environment_app_service_name'))]"
       ],
@@ -529,7 +529,7 @@
       "type": "Microsoft.Web/sites/config",
       "apiVersion": "2018-11-01",
       "name": "[concat(parameters('dev_environment_app_service_name'), '/web')]",
-      "location": "parameters('location_name')",
+      "location": "northeurope",
       "dependsOn": [
         "[resourceId('Microsoft.Web/sites', parameters('dev_environment_app_service_name'))]"
       ],
@@ -641,7 +641,7 @@
       "type": "Microsoft.Web/sites/config",
       "apiVersion": "2018-11-01",
       "name": "[concat(parameters('test_environment_app_service_name'), '/web')]",
-      "location": "parameters('location_name')",
+      "location": "northeurope",
       "dependsOn": [
         "[resourceId('Microsoft.Web/sites', parameters('test_environment_app_service_name'))]"
       ],
@@ -753,7 +753,7 @@
       "type": "Microsoft.Web/sites/hostNameBindings",
       "apiVersion": "2018-11-01",
       "name": "[concat(parameters('production_environment_app_service_name'), '/', parameters('production_environment_app_service_name'), '.azurewebsites.net')]",
-      "location": "parameters('location_name')",
+      "location": "northeurope",
       "dependsOn": [
         "[resourceId('Microsoft.Web/sites', parameters('production_environment_app_service_name'))]"
       ],
@@ -766,7 +766,7 @@
       "type": "Microsoft.Web/sites/hostNameBindings",
       "apiVersion": "2018-11-01",
       "name": "[concat(parameters('dev_environment_app_service_name'), '/', parameters('dev_environment_app_service_name'), '.azurewebsites.net')]",
-      "location": "parameters('location_name')",
+      "location": "northeurope",
       "dependsOn": [
         "[resourceId('Microsoft.Web/sites', parameters('dev_environment_app_service_name'))]"
       ],
@@ -779,7 +779,7 @@
       "type": "Microsoft.Web/sites/hostNameBindings",
       "apiVersion": "2018-11-01",
       "name": "[concat(parameters('test_environment_app_service_name'), '/', parameters('test_environment_app_service_name'), '.azurewebsites.net')]",
-      "location": "parameters('location_name')",
+      "location": "northeurope",
       "dependsOn": [
         "[resourceId('Microsoft.Web/sites', parameters('test_environment_app_service_name'))]"
       ],
