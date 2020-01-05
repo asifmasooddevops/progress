@@ -61,7 +61,7 @@
       "type": "Microsoft.KeyVault/vaults",
       "apiVersion": "2016-10-01",
       "name": "[parameters('key_vault_name')]",
-      "location": "parameters('location_name')",
+      "location": "northeurope",
       "properties": {
         "sku": {
           "family": "A",
@@ -290,7 +290,7 @@
       "type": "Microsoft.KeyVault/vaults/secrets",
       "apiVersion": "2016-10-01",
       "name": "[concat(parameters('key_vault_name'), '/ConnectedServiceName')]",
-      "location": "parameters('location_name')",
+      "location": "northeurope",
       "dependsOn": [
         "[resourceId('Microsoft.KeyVault/vaults', parameters('key_vault_name'))]"
       ],
