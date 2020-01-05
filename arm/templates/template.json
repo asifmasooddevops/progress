@@ -22,10 +22,6 @@
       "defaultValue": "training-web-app",
       "type": "String"
     },
-    "location_name": {
-      "defaultValue": "North Europe",
-      "type": "String"
-    },
     "production_environment_app_service_name": {
       "defaultValue": "avanade-memija-dach-training",
       "type": "String"
