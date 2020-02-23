@@ -14,6 +14,20 @@ stages:
       # Use variables that can be found within Build variable group.
     - group: Build
     steps:
+    - task: AzureResourceManagerTemplateDeployment@3
+      # Deploy Azure resources.
+      inputs:
+        deploymentScope: 'Resource Group'
+        azureResourceManagerConnection: '$(ConnectedServiceName)'
+        subscriptionId: '$(VisualStudioSubscriptionId)'
+        action: 'Create Or Update Resource Group'
+        resourceGroupName: 'training-web-app-rg'
+        location: 'North Europe'
+        templateLocation: 'URL of the file'
+        csmFileLink: 'https://raw.githubusercontent.com/Memija/progress/master/arm/templates/template.json'
+        overrideParameters: '-connected_service_name_value "$(ConnectedServiceName)" -tenant_id_value "$(TenantId)" -visual_studio_subscription_id "$(VisualStudioSubscriptionId)"'
+        deploymentMode: 'Incremental'
+      displayName: 'Deploy Azure resources'
     - task: NodeTool@0
       # Install required Node.js version on which the application will run.
       inputs:
