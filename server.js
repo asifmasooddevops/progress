@@ -8,7 +8,7 @@ app.use(compression());
 app.use(express.static(__dirname + '/dist/training/'));
 
 app.get('/*', function(request, response) {
-  response.sendFile(path.join(__dirname + '/dist/training/index.html'));
+  response.sendFile(path.join(__dirname + 'index.html'));
 });
 
 app.listen(process.env.PORT || 8080);
