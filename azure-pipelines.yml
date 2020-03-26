@@ -1,6 +1,6 @@
 # Trigger pipeline each time master branch is updated.
-trigger:
-- master
+trigger: none
+#- master
 stages:
 - stage: 'Build'
   displayName: 'Build Angular application'
